@@ -15,6 +15,7 @@ def deploy_fund_me():
         price_feed_address = config["networks"][network.show_active()][
             "eth_usd_price_feed"
         ]
+
     else:
         deploy_mocks()
         price_feed_address = MockV3Aggregator[-1].address

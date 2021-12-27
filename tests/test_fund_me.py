@@ -8,7 +8,6 @@ def test_can_fund_and_withdraw():
     account = get_account()
     print(account)
     fund_me = deploy_fund_me()
-    print(fund_me)
     entrance_fee = fund_me.getEntranceFee() + 100
     tx = fund_me.Fund({"from": account, "value": entrance_fee})
     tx.wait(1)
